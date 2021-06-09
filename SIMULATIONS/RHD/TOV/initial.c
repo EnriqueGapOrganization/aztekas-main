@@ -17,14 +17,15 @@ void Initial()
    dt = 0.0;
 
 #if DIM == 1 
-
    /////////////////////////////
    //-------Riemann-1D--------//
-   /////////////////////////////
-
+   /////////////////////////////	
    for(int i = 0; i <= Nx1; i++)
    {
-      if(grid.X1[i] < x_0)
+   	U(RHO,i) = 1.0/3.0 - POL*pow(exp(x1min),2.0)/30.0 + POL*(8.0*POL-5.0)*pow(exp(x1min),4.0)/2520.0;
+	U(PRE,i) = 1.0 - pow(exp(x1min),2.0)/6.0 + POL*pow(exp(x1min),4.0)/120.0;
+	U(VX1,i) = 0.0;
+      /*if(grid.X1[i] < x_0)
       {
          U(RHO,i) = rhol;
          U(PRE,i) = pl;
@@ -35,7 +36,7 @@ void Initial()
          U(RHO,i) = rhor;
          U(PRE,i) = pr;
          U(VX1,i) = vx1r;
-      }
+      }*/
    }
 
 #elif DIM == 2

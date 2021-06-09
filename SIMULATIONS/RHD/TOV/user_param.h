@@ -22,7 +22,11 @@
 #define GRID               UNIFORM
 
 #define INTERFACE          DIAGONAL
+#define POL		    3
+#define FC		    0.001
 
 double rhol, pl, vx1l, vx2l, vx3l;
 double rhor, pr, vx1r, vx2r, vx3r;
 double x_0;
+int test_module();
+double  f(double x, double y, double z, int i);
