@@ -36,9 +36,18 @@ else
    PARAM += -DTOV=FALSE
    PARAM += -DODE=FALSE
 endif
+ifeq ($(LE),True)
+   PARAM += -DLE=TRUE
+   PARAM += -DODE=TRUE
+else
+   TOV=False
+   PARAM += -DLE=FALSE
+   PARAM += -DODE=FALSE
+endif
 
 ifeq ($(HYDRO),False)
    ifeq ($(TOV),False)
+   	ifeq ($(LE),False)
       $(info #####################)
       $(info # COMPILATION ERROR #)
       $(info #####################)
@@ -49,6 +58,7 @@ ifeq ($(HYDRO),False)
       $(info - Tolman-Oppenheimer-Volkoff  -> TOV=True)
       $(info )
       $(error Failed compilation)
+      	endif
    endif
 endif
 

@@ -7,3 +7,6 @@ endif
 ifeq ($(TOV),True)
    include  $(AZTPATH)/Src/integration/ODE/Makefile
 endif
+ifeq ($(LE),True)
+   include  $(AZTPATH)/Src/integration/ODE/Makefile
+endif

@@ -51,6 +51,6 @@ U(0,j)=U(0,j)*pow(U(2,j),3);
 }
 }
 double  f(double x, double y, double z, int i){
-if (i==0) return(pow(z,POL)-3.0*y);		//dnu/dx =	theta^n -3*nu
-if (i==1) return(-exp(2.0*x)*y); 		//dtheta/dx =	-nu*exp^2x
+if (i==0) return(pow(z,3.0/2.0)*pow((z+(2.0/fc)),3.0/2.0)-3.0*y);	//dnu/dx    = theta^3/2*(theta + 2/fc)^3/2 - 3nu
+if (i==1) return(-y*exp(2.0*x));					//dtheta/dx = -nu*e^2x
 }
