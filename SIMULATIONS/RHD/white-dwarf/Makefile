@@ -34,7 +34,7 @@ OMP_NUM = 1
 #    - TOV (Tolman-Oppenheimer-Volkoff, RHD only)
 ##################################################
 
-PHY = HD
+PHY = RHD
 
 HYDRO = True
 TOV   = True
@@ -85,8 +85,9 @@ INT = Standard
 USR = initial.c \
       user_boundaries.c \
 		user_input.c \
-			le_ode.c \
-				le_variables.c 
+			wd_ode.c \
+				wd_variables.c \
+
 ##################################################
 # Include a global Makefile in the /Src/ 
 # directory, which has some definitions

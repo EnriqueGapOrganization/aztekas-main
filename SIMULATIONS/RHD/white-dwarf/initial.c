@@ -23,8 +23,8 @@ void Initial()
    for(int i = 0; i <= Nx1; i++)
    {
    	U(0,i) = 0.0;
-   	U(1,i) = 1.0/3.0 - POL*pow(exp(x1min),2.0)/30.0 + POL*(8.0*POL-5.0)*pow(exp(x1min),4.0)/2520.0;
-	U(2,i) = 1.0 - pow(exp(x1min),2.0)/6.0 + POL*pow(exp(x1min),4.0)/120.0;
+   	U(1,i) = pow((1.0+2.0/FC),3.0/2.0)/3.0 - (pow((1.0+2.0/FC),3.0)+pow((1.0+2.0/FC),2.0))*pow(exp(x1min),2.0)/20.0;
+	U(2,i) = 1.0 - pow((1.0+2.0/FC),3.0/2.0)*pow(exp(x1min),2.0)/6.0;
       /*if(grid.X1[i] < x_0)
       {
          U(RHO,i) = rhol;

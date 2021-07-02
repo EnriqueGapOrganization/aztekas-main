@@ -22,7 +22,7 @@
 #define GRID               UNIFORM
 
 #define INTERFACE          DIAGONAL
-#define POL		    1
+#define FC		    10
 #define ERR		    0.000001
 
 double rhol, pl, vx1l, vx2l, vx3l;
@@ -31,4 +31,3 @@ double x_0;
 double  f(double x, double y, double z, int i);
 void phy_param();
 void flag(int *a);
-//void flag(int *a, double x, double h)

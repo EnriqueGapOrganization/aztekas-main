@@ -27,12 +27,6 @@ void Equation_System_Solver()
 
 #endif
 
-#if LE == TRUE
-
-   ODE_Integration();
-
-#endif
-
 #if HYDRO == TRUE
    while(grid.time <= tmax)
    {
