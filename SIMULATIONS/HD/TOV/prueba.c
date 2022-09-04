@@ -7,6 +7,7 @@ int test_module(){
 	rk_ rk;
 	rk.h = (x1max-x1min)/Nx1;
 	int dim=2;
+	int prueba=3;
 	double y[dim];
 	double x;
 	for(int i=0;i<Nx1;i++){
