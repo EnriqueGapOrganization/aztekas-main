@@ -27,3 +27,5 @@ where ![equation](https://latex.codecogs.com/gif.latex?Q) is the vector of conse
 1. Run the command `$ chmod 755 setup` inside the main directory.
 2. Create a new directory wherever you want.
 3. Run the `setup` script inside this new repository and setup the files for the new simulation: `$ $AZTEKAS_PATH/setup`
+
+2017
